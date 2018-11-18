@@ -1,0 +1,24 @@
+{
+  "name": "express_redis",
+  "version": "0.0.1",
+  "description": "Express server and redis cache",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmtargosz/express_redis.git"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "redis"
+  ],
+  "author": "Pawel Targosz <pmtargosz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmtargosz/express_redis/issues"
+  },
+  "homepage": "https://github.com/pmtargosz/express_redis#readme"
+}
