@@ -1,10 +1,11 @@
 {
   "name": "express_redis",
   "version": "0.0.1",
-  "description": "Express server and redis cache",
+  "description": "Express server and redis cache inside docker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development nodemon",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -13,12 +14,20 @@
   "keywords": [
     "express",
     "nodejs",
-    "redis"
+    "redis",
+    "docker"
   ],
   "author": "Pawel Targosz <pmtargosz@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pmtargosz/express_redis/issues"
   },
-  "homepage": "https://github.com/pmtargosz/express_redis#readme"
+  "homepage": "https://github.com/pmtargosz/express_redis#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
 }

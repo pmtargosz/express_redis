@@ -6,23 +6,51 @@ Playground for express, redis.
 
 First, clone this repo and change to the directory:
 ```bash
-git clone git@github.com:pmtargosz/<project>.git
-cd <project>
+$ git clone git@github.com:pmtargosz/<project>.git
+$ cd <project>
 ```
 
 ### Install
 
 ```bash
-npm install
+$ npm install
 ```
 
 ### Config
 
+Creat `config.js` file inside project root folder and add this code changing `<your_data>`:
+```js
+const config = {
+    PORT: process.env.PORT || 3000,
+    ENV: process.env.NODE_ENV || 'development',
+}
+
+module.exports = config;
+```
+
 ### Run Dev Environment
 
 ```bash
-npm run server
+$ npm run dev
 # http://localhost:3000
+```
+
+### Run
+
+```bash
+$ docker-compose up
+```
+
+## Example
+
+### Sore some data
+```bash
+$ curl http://localhost:3000/store/my-key\?some\=value\&some-other\=other-value
+```
+
+### Retrieve that data
+```bash
+$ curl http://localhost:3000/my-key
 ```
 
 ## Resources
