@@ -8,5 +8,3 @@ logs
 *.log
 npm-debug.log*
 package-lock.json
-### Config Files ###
-config.js

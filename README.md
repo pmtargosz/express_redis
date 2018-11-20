@@ -16,18 +16,6 @@ $ cd <project>
 $ npm install
 ```
 
-### Config
-
-Creat `config.js` file inside project root folder and add this code changing `<your_data>`:
-```js
-const config = {
-    PORT: process.env.PORT || 3000,
-    ENV: process.env.NODE_ENV || 'development',
-}
-
-module.exports = config;
-```
-
 ### Run Dev Environment
 
 ```bash
