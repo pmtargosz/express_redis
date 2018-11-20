@@ -16,13 +16,6 @@ $ cd <project>
 $ npm install
 ```
 
-### Run Dev Environment
-
-```bash
-$ npm run dev
-# http://localhost:3000
-```
-
 ### Run
 
 ```bash
