@@ -1,5 +1,5 @@
 const express = require('express');
-const { PORT } = require('../config');
+const { PORT, REDIS_URL } = require('../config');
 const redisClient = require('./redis-client');
 
 const app = express();
@@ -7,10 +7,10 @@ const app = express();
 app.get('/store/:key', async (req, res) => {
     const { key } = req.param
     const value = req.query
-    
+
     await redisClient.setAsync(key, JSON.stringify(value))
 
-    return res.send('yupiii')
+    return res.send('added to redis cache, yupiiii!')
 })
 
 app.get('/:key', async (req, res) => {
