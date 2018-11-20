@@ -43,9 +43,9 @@ $ docker-compose up
 
 ## Example
 
-### Sore some data
+### Store some data
 ```bash
-$ curl http://localhost:3000/store/my-key\?some\=value\&some-other\=other-value
+$ curl http://localhost:3000/store/my-key?some=value_test&some-other=other-value
 ```
 
 ### Retrieve that data

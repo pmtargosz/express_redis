@@ -1,17 +1,21 @@
-# docker-compose.yml
+# # docker-compose.yml
 redis:
-    image: redis
-    container_name: cache
-    expose:
-    - 6379
+  image: redis
+  container_name: cache
+  ports:
+    - 6379:6379
+  # expose:
+  #   - 6379
 app:
-    build: ./
-    volumes:
+  links:
+    - redis
+  build: ./
+  volumes:
     - ./:/var/www/app
-    ports:
+  ports:
     - 3000:3000
-    environment:
+  environment:
     - REDIS_URL=redis://cache
     - NODE_ENV=production
     - PORT=3000
-    command: sh -c 'npm i && npm run start'
+  command: sh -c 'npm i && npm run start'
